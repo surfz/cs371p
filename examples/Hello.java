@@ -4,7 +4,9 @@
 
 /*
 %javac -version
-javac 1.6.0_33
+javac 1.6.0_24
+
+
 
 % javac -Xlint Hello.java
 % java  -ea    Hello
