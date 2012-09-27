@@ -247,7 +247,7 @@ int main () {
 
     {
     int a[] = {2, 3, 4};
-    assert(a[1] == 3);               // array index
+    assert(a[1] == 3);   // array index
     ++a[1];
     assert(a[1] == 4);
     }
@@ -255,7 +255,7 @@ int main () {
     {
     const int a[] = {2, 3, 4};
     assert(a[1] == 3);
-//  ++a[1];                          // error: increment of read-only location
+//  ++a[1];                    // error: increment of read-only location
     }
 
     cout << "Done." << endl;

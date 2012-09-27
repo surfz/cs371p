@@ -2,6 +2,13 @@
 // Hello.c++
 // ---------
 
+#include <iostream> // cout, endl
+
+int main () {
+    using namespace std;
+    cout << "Nothing to be done." << endl;
+    return 0;}
+
 /*
 % g++ -v
 Using built-in specs.
@@ -30,16 +37,10 @@ gcc version 4.7.1 (Ubuntu/Linaro 4.7.1-3lucid3)
 Debian clang version 3.1-4ppa3 (branches/release_31) (based on LLVM 3.1)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
-
-
-
-% g++ -pedantic -std=c++0x -Wall Hello.c++ -o Hello.c++.app
-% Hello.c++.app
 */
 
-#include <iostream> // cout, endl
-
-int main () {
-    using namespace std;
-    cout << "Nothing to be done." << endl;
-    return 0;}
+/*
+% g++ -pedantic -std=c++0x -Wall Hello.c++ -o Hello.c++.app
+% Hello.c++.app
+Nothing to be done.
+*/
