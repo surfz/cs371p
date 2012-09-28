@@ -33,6 +33,7 @@ Haskell
 
 programming languages embody many central concepts of cs
 studying programming languages provides insights to all aspects of cs
+
 courses should present those concepts in a broader context than a single
 langauge
 */
