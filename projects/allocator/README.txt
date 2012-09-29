@@ -20,7 +20,7 @@ Partner Actual    number of hours:
 
 Turnin CS Username:
 GitHub ID:
-GitHub Repository Name:
+GitHub Repository Name: cs371p-allocator
 
 Comments:
 
