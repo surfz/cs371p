@@ -161,7 +161,7 @@ int main () {
     fill(a, a + s, v);
     int* b = new int[s];
     fill(b, b + s, v);
-//  b = a;                                  // memory leak
+//  b = a;                           // memory leak
     copy(a, a + s, b);
     assert( a[1] ==  b[1]);
     assert(&a[1] != &b[1]);
