@@ -7,7 +7,7 @@
 #include <iostream>   // cout, endl
 #include <list>       // list
 #include <numeric>    // accumulate, inner_product
-#include <set>        // list
+#include <set>        // set
 #include <vector>     // vector
 
 int sum_1 (int* a, int n) {
