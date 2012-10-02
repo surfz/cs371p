@@ -57,7 +57,7 @@ int main () {
     const size_t s = 10;
 //  const int    a[s];   // error: uninitialized const 'a'
     int a[s];
-    assert(a[0] == 0);   // undefined
+//  assert(a[0] == 0);   // undefined
     }
 
     {
@@ -178,13 +178,13 @@ int main () {
 	int* b = a;
 	int* e = a + s;
 	while (b != e) {
-		x.construct(&*b, v);
+		x.construct(b, v);
 		++b;}
     assert(count(a, a + s, v) == s);
 	b = a;
 	while (b != e) {
 		--e;
-		x.destroy(&*e);}
+		x.destroy(e);}
     x.deallocate(a, s);
     }
 
