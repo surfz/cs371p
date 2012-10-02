@@ -6,6 +6,7 @@
 #include <cassert>   // assert
 #include <cstddef>   // ptrdiff_t, size_t
 #include <iostream>  // cout, endl
+#include <memory>    // allocator, uninitialized_fill
 #include <vector>    // vector
 
 struct A     {int i; void f () {}};
@@ -167,6 +168,24 @@ int main () {
     assert(&a[1] != &b[1]);
     delete [] a;
     delete [] b;
+    }
+
+    {
+    allocator<int> x;
+    const ptrdiff_t  s = 10;
+    const int        v =  2;
+          int* const a = x.allocate(s);
+	int* b = a;
+	int* e = a + s;
+	while (b != e) {
+		x.construct(&*b, v);
+		++b;}
+    assert(count(a, a + s, v) == s);
+	b = a;
+	while (b != e) {
+		--e;
+		x.destroy(&*e);}
+    x.deallocate(a, s);
     }
 
     {
