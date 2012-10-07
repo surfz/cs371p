@@ -12,7 +12,6 @@
 // --------
 
 #include <cassert>   // assert
-#include <cstddef>   // size_t
 #include <new>       // new
 #include <stdexcept> // invalid_argument
 
@@ -20,7 +19,7 @@
 // Allocator
 // ---------
 
-template <typename T, std::size_t N>
+template <typename T, int N>
 class Allocator {
     public:
         // --------
@@ -29,7 +28,7 @@ class Allocator {
 
         typedef T                 value_type;
 
-        typedef std::size_t       size_type;
+        typedef int               size_type;
         typedef std::ptrdiff_t    difference_type;
 
         typedef value_type*       pointer;
