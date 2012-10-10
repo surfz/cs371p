@@ -47,6 +47,18 @@ T diag (const T& x) {
     return x;}
 
 // ---
+// dot
+// ---
+
+/**
+ * <your documentation>
+ * http://www.mathworks.com/help/matlab/ref/dot.html
+ */
+template <typename T>
+T dot (const T& x, const T& y) {
+    return x;}
+
+// ---
 // eye
 // ---
 

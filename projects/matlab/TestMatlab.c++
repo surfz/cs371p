@@ -55,6 +55,17 @@ struct TestMatlab : CppUnit::TestFixture {
         CPPUNIT_ASSERT(x == y);}
 
     // --------
+    // test_dot
+    // --------
+
+    void test_dot () {
+        Matrix<int> x;
+        Matrix<int> y;
+        Matrix<int> z;
+        x = dot(x, y);
+        CPPUNIT_ASSERT(x == z);}
+
+    // --------
     // test_eye
     // --------
 
