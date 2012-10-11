@@ -42,7 +42,7 @@ struct TestMatrix : CppUnit::TestFixture {
 
     void test_index () {
         const Matrix<int> x;
-        CPPUNIT_ASSERT(x[0] == 0);}
+        CPPUNIT_ASSERT(x[0][0] == 0);}
 
     // -----------
     // test_equals
