@@ -49,7 +49,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend bool operator == (const Matrix&, const Matrix&) {
+        friend Matrix operator == (const Matrix&, const Matrix&) {
             // <your code>
             return true;}
 
@@ -60,7 +60,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend bool operator != (const Matrix& lhs, const Matrix& rhs) {
+        friend Matrix operator != (const Matrix& lhs, const Matrix& rhs) {
             return !(lhs == rhs);}
 
         // ----------
@@ -70,7 +70,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend bool operator < (const Matrix& lhs, const Matrix& rhs) {
+        friend Matrix operator < (const Matrix& lhs, const Matrix& rhs) {
             // <your code>
             return false;}
 
@@ -81,7 +81,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend bool operator <= (const Matrix& lhs, const Matrix& rhs) {
+        friend Matrix operator <= (const Matrix& lhs, const Matrix& rhs) {
             return !(rhs < lhs);}
 
         // ----------
@@ -91,7 +91,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend bool operator > (const Matrix& lhs, const Matrix& rhs) {
+        friend Matrix operator > (const Matrix& lhs, const Matrix& rhs) {
             return (rhs < lhs);}
 
         // -----------
@@ -101,7 +101,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend bool operator >= (const Matrix& lhs, const Matrix& rhs) {
+        friend Matrix operator >= (const Matrix& lhs, const Matrix& rhs) {
             return !(lhs < rhs);}
 
         // ----------
