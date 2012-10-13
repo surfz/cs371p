@@ -35,14 +35,14 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> y;
         Matrix<int> z;
         x = horzcat(x, y);
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     void test_vertcat () {
         Matrix<int> x;
         Matrix<int> y;
         Matrix<int> z;
         x = vertcat(x, y);
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     // ---------
     // test_diag
@@ -52,7 +52,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = diag(x);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // --------
     // test_dot
@@ -63,7 +63,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> y;
         Matrix<int> z;
         x = dot(x, y);
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     // --------
     // test_eye
@@ -73,7 +73,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = eye< Matrix<int> >(2, 3);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // -------------
     // test_linsolve
@@ -84,7 +84,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> y;
         Matrix<int> z;
         x = linsolve(x, y);
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     // ---------
     // test_ones
@@ -94,7 +94,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = ones< Matrix<int> >(2, 3);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // ---------
     // test_rand
@@ -104,7 +104,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = rand< Matrix<int> >(2, 3);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // --------------
     // test_transpose
@@ -114,7 +114,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = transpose(x);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // ---------
     // test_tril
@@ -124,7 +124,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = tril(x);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // ---------
     // test_triu
@@ -134,7 +134,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = triu(x);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // ----------
     // test_zeros
@@ -144,7 +144,7 @@ struct TestMatlab : CppUnit::TestFixture {
         Matrix<int> x;
         Matrix<int> y;
         x = zeros< Matrix<int> >(2, 3);
-        CPPUNIT_ASSERT(x == y);}
+        CPPUNIT_ASSERT(x.eq(y));}
 
     // -----
     // suite
