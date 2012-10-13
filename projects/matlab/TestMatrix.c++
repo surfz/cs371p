@@ -49,20 +49,24 @@ struct TestMatrix : CppUnit::TestFixture {
     // -----------
 
     void test_equals () {
-        Matrix<int> x;
-        Matrix<int> y;
-        CPPUNIT_ASSERT(  x == y);
-        CPPUNIT_ASSERT(!(x != y));}
+        Matrix<int>  x;
+        Matrix<int>  y;
+        Matrix<bool> z;
+        Matrix<bool> t;
+        z = (x == y);
+        CPPUNIT_ASSERT(z.eq(t));}
 
     // --------------
     // test_less_than
     // --------------
 
     void test_less_than () {
-        Matrix<int> x;
-        Matrix<int> y;
-        CPPUNIT_ASSERT(  x == y);
-        CPPUNIT_ASSERT(!(x != y));}
+        Matrix<int>  x;
+        Matrix<int>  y;
+        Matrix<bool> z;
+        Matrix<bool> t;
+        z = (x == y);
+        CPPUNIT_ASSERT(z.eq(t));}
 
     // ---------
     // test_plus
@@ -73,9 +77,9 @@ struct TestMatrix : CppUnit::TestFixture {
         Matrix<int> y;
         Matrix<int> z;
         x += 0;
-        CPPUNIT_ASSERT(x == z);
+        CPPUNIT_ASSERT(x.eq(z));
         x += y;
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     // ----------
     // test_minus
@@ -86,9 +90,9 @@ struct TestMatrix : CppUnit::TestFixture {
         Matrix<int> y;
         Matrix<int> z;
         x -= 0;
-        CPPUNIT_ASSERT(x == z);
+        CPPUNIT_ASSERT(x.eq(z));
         x -= y;
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     // ---------------
     // test_multiplies
@@ -99,9 +103,9 @@ struct TestMatrix : CppUnit::TestFixture {
         Matrix<int> y;
         Matrix<int> z;
         x *= 0;
-        CPPUNIT_ASSERT(x == z);
+        CPPUNIT_ASSERT(x.eq(z));
         x *= y;
-        CPPUNIT_ASSERT(x == z);}
+        CPPUNIT_ASSERT(x.eq(z));}
 
     // -------------
     // test_iterator

@@ -49,7 +49,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend Matrix operator == (const Matrix&, const Matrix&) {
+        friend Matrix<bool> operator == (const Matrix&, const Matrix&) {
             // <your code>
             return true;}
 
@@ -60,8 +60,9 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend Matrix operator != (const Matrix& lhs, const Matrix& rhs) {
-            return !(lhs == rhs);}
+        friend Matrix<bool> operator != (const Matrix& lhs, const Matrix& rhs) {
+            // <your code>
+            return true;}
 
         // ----------
         // operator <
@@ -70,7 +71,7 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend Matrix operator < (const Matrix& lhs, const Matrix& rhs) {
+        friend Matrix<bool> operator < (const Matrix& lhs, const Matrix& rhs) {
             // <your code>
             return false;}
 
@@ -81,8 +82,9 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend Matrix operator <= (const Matrix& lhs, const Matrix& rhs) {
-            return !(rhs < lhs);}
+        friend Matrix<bool> operator <= (const Matrix& lhs, const Matrix& rhs) {
+            // <your code>
+            return true;}
 
         // ----------
         // operator >
@@ -91,8 +93,9 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend Matrix operator > (const Matrix& lhs, const Matrix& rhs) {
-            return (rhs < lhs);}
+        friend Matrix<bool> operator > (const Matrix& lhs, const Matrix& rhs) {
+            // <your code>
+            return true;}
 
         // -----------
         // operator >=
@@ -101,8 +104,9 @@ class Matrix {
         /**
          * <your documentation>
          */
-        friend Matrix operator >= (const Matrix& lhs, const Matrix& rhs) {
-            return !(lhs < rhs);}
+        friend Matrix<bool> operator >= (const Matrix& lhs, const Matrix& rhs) {
+            // <your code>
+            return true;}
 
         // ----------
         // operator +
@@ -259,6 +263,17 @@ class Matrix {
         Matrix& operator *= (const Matrix& rhs) {
             // <your code>
             return *this;}
+
+        // --
+        // eq
+        // --
+
+        /**
+         * <your documentation>
+         */
+        bool eq (const Matrix&) const {
+            // <your code>
+            return true;}
 
         // -----
         // begin
