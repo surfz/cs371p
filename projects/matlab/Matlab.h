@@ -24,6 +24,7 @@
  */
 template <typename T>
 T horzcat (const T& x, const T& y) {
+    // <your code>
     return x;}
 
 /**
@@ -32,6 +33,7 @@ T horzcat (const T& x, const T& y) {
  */
 template <typename T>
 T vertcat (const T& x, const T& y) {
+    // <your code>
     return x;}
 
 // ----
@@ -44,6 +46,7 @@ T vertcat (const T& x, const T& y) {
  */
 template <typename T>
 T diag (const T& x) {
+    // <your code>
     return x;}
 
 // ---
@@ -56,6 +59,7 @@ T diag (const T& x) {
  */
 template <typename T>
 T dot (const T& x, const T& y) {
+    // <your code>
     return x;}
 
 // ---
@@ -68,6 +72,7 @@ T dot (const T& x, const T& y) {
  */
 template <typename T>
 T eye (std::size_t r, std::size_t c) {
+    // <your code>
     T x;
     return x;}
 
@@ -81,6 +86,7 @@ T eye (std::size_t r, std::size_t c) {
  */
 template <typename T>
 T linsolve (const T& x, const T& y) {
+    // <your code>
     return x;}
 
 // ----
@@ -93,6 +99,7 @@ T linsolve (const T& x, const T& y) {
  */
 template <typename T>
 T ones (std::size_t r, std::size_t c) {
+    // <your code>
     T x;
     return x;}
 
@@ -106,6 +113,7 @@ T ones (std::size_t r, std::size_t c) {
  */
 template <typename T>
 T rand (std::size_t r, std::size_t c) {
+    // <your code>
     T x;
     return x;}
 
@@ -119,6 +127,7 @@ T rand (std::size_t r, std::size_t c) {
  */
 template <typename T>
 T transpose (const T& x) {
+    // <your code>
     return x;}
 
 // ----
@@ -131,6 +140,7 @@ T transpose (const T& x) {
  */
 template <typename T>
 T tril (const T& x) {
+    // <your code>
     return x;}
 
 // ----
@@ -143,6 +153,7 @@ T tril (const T& x) {
  */
 template <typename T>
 T triu (const T& x) {
+    // <your code>
     return x;}
 
 // -----
@@ -155,6 +166,7 @@ T triu (const T& x) {
  */
 template <typename T>
 T zeros (std::size_t r, std::size_t c) {
+    // <your code>
     T x;
     return x;}
 
