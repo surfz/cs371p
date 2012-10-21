@@ -1,6 +1,6 @@
-// --------
-// Test.c++
-// --------
+// ---------------
+// Exceptions3.c++
+// ---------------
 
 #include <cassert>   // assert
 #include <cstring>   // strcmp
@@ -13,7 +13,7 @@ struct My_Exception : std::exception {
 
 int main () {
     using namespace std;
-    cout << "Test.c++" << endl;
+    cout << "Exceptions3.c++" << endl;
 
     My_Exception x;
     exception& y = x;
