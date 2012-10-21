@@ -16,7 +16,7 @@ int main () {
     cout << "Exceptions3.c++" << endl;
 
     My_Exception x;
-    exception& y = x;
+    exception&   y = x;
     assert(strcmp(y.what(), "My_Exception") == 0);
 
     cout << "Done." << endl;
