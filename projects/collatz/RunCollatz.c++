@@ -7,7 +7,7 @@
 /*
 To run the program:
     % g++ -pedantic -std=c++0x -Wall RunCollatz.c++ -o RunCollatz.c++.app
-    % valgrind RunCollatz.c++.app < RunCollatz.in >& RunCollatz.out
+    % valgrind RunCollatz.c++.app < RunCollatz.in > RunCollatz.out
 
 To configure Doxygen:
     % doxygen -g
