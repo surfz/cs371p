@@ -177,6 +177,7 @@ int main () {
         10 Trap
         10 Best
         Simulate 1000 moves.
+        Best MUST outnumber ALL other species.
         Print every 100th grid.
         */
         }
