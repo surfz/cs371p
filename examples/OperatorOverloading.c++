@@ -6,13 +6,10 @@
 #include <cassert>   // assert
 #include <cstddef>   // size_t
 #include <iostream>  // cout, endl, istream, ostream
-#include <memory>    // allocator
 #include <sstream>   // istringstream, ostringstream
 #include <stdexcept> // out_of_range
 #include <string>    // ==
 #include <utility>   // !=, <=, >, >=
-
-#include "Memory.h"  // my_destroy, my_uninitialized_copy, my_uninitialized_fill
 
 /*
 namespace std     {
@@ -38,23 +35,20 @@ inline bool operator >= (const T& lhs, const T& rhs) {
 } // std;
 */
 
-template <typename T, typename A = std::allocator<T> >
+template <typename T>
 class my_vector {
     private:
-        A                 _x;
         const std::size_t _s;
         T*    const       _a;
 
     public:
-        explicit my_vector (std::size_t s = 0, const T& v = T(), const A& x = A()) :
-                _x (x),
+        explicit my_vector (std::size_t s = 0, const T& v = T()) :
                 _s (s),
-                _a (_x.allocate(s)) {
-            my_uninitialized_fill(_x, begin(), end(), v);}
+                _a (new T[_s]) {
+            std::fill(begin(), end(), v);}
 
         ~my_vector () {
-            my_destroy(_x, begin(), end());
-            _x.deallocate(begin(), _s);}
+            delete [] _a;}
 
         T& operator [] (std::size_t i) {
             return _a[i];}
